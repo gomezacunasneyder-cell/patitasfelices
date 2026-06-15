@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+       <header class="navegacion-menu">
+        <div class="menu-container">
+        <a class="logo">
+            <img src="imagenes/logo.png" alt="Logo Patitas Feliices">Patitas Felices
+        </a>
+        <nav class="menu-link">
+            <a href="index.html">Inicio</a>
+            <a href="#conocenos">Conocenos</a>
+            <a href="adopcion.html">Adoptar</a>
+            <a href="formulario.html">Contactanos</a>
+            <a href="grafica.html">Grafica</a>
+    </header>
+    <div class="formulario">
+        <h2>Formulario de Adopción</h2>
+        <p>Completa tus datos para iniciar el proceso.</p>
+        
+        <form action="#" method="POST">
+            
+            <div class="grupo-campo">
+                <label for="nombre">Nombre *</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+             <div class="grupo-campo">
+                <label for="nombre">Apellidos *</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="grupo-campo">
+                <label for="nombre">Ciudad *</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+
+
+            <div class="grupo-campo">
+                <label for="correo">Correo Electrónico *</label>
+                <input type="email" id="correo" name="correo" required>
+            </div>
+            
+            <div class="grupo-campo">
+                <label for="telefono">Teléfono *</label>
+                <input type="tel" id="telefono" name="telefono" required>
+            </div>
+            
+            <div class="grupo-campo">
+                <label for="tipo-vivienda">Tipo de consulta*</label>
+                <select id="tipo-vivienda" name="tipo-vivienda" required>
+                    <option value="" disabled selected>Selecciona una opción</option>
+                    <option value="Adopcion">Adopción</option>
+                    <option value="Donacion"> Donación</option>
+                    <option value="Voluntariado">Voluntariado </option>
+                    
+                </select>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="motivo">¿Por qué deseas adoptar? *</label>
+                <textarea id="motivo" name="motivo" rows="3" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-enviar">Enviar Solicitud</button>
+            
+        </form>
+    </div>
+    
+</body>         
+</html> >
