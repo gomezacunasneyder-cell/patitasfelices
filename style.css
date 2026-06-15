@@ -1,0 +1,669 @@
+/* menu de navegacion */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e6ecf2;
+  color:white;
+}
+.navegacion-menu{
+  padding: 12px 15px;
+  background-color: #d1576f;
+  padding: 18px 40px;
+  box-shadow:0 4px 15px rgba(0,0,0,.3);
+  position: sticky;
+  top: 0;
+  z-index:100;
+} 
+@media (max-width: 768px) {
+.menu-container, .logo{
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+  justify-content: center;
+}
+}
+.menu-link a {
+  justify-content: space-between;
+  font-size: 14px;
+  text-decoration: none; 
+  color: #FFFFFF;        
+  font-size: 16px;       
+  font-weight: bold;      
+}
+.menu-link a:hover {
+  color: #FFE600;              
+  text-decoration: underline;  
+}
+.menu-container{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+}
+/* fin de menu navegacion */
+/* acomodar logo  de pagina */
+.logo{
+  color: #FFE600;
+  display:flex;
+  align-items: center;
+  text-decoration: none;
+}
+.logo img{
+  width: 50px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+/* fin de acomodar logo */
+/* inicio de configuarcion de carrusel */
+.fotos-inicio {
+  border-radius: 20px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  overflow: hidden;
+}
+.animacion-foto {
+ width: 100%;  
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: cambio-imagenes 12s infinite;
+}
+.texto-imagenes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #1a365d;
+  padding: 20px;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+  font-weight: 700;
+  width: 100%;
+  height: 100%;
+}
+.texto-imagenes p{
+  color: #cbd5e1; 
+  font-size: 1rem;
+  font-weight: 500;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); 
+}
+
+@keyframes cambio-imagenes {
+  0%, 30% {
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(imagenes/foto5.png);
+  }
+  35%, 65% {
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(imagenes/imagen3.png);
+  }
+  70%, 100% {
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(imagenes/foto6.png);
+  }
+}
+/* fin de configuarcion de carrusel */
+/* Contenedor principal en dos columnas */
+.seccion-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; 
+  padding: 40px 20px;
+  background-color: #fcf8f9; 
+}
+/* Estilo base de las tarjetas */
+.tarjeta-info {
+  flex: 1;
+  max-width: 500px; 
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); 
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+/* Títulos dentro de las tarjetas (en el tono rosa de tu barra de navegación) */
+.tarjeta-info h3 {
+  color: #90e0ef; 
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+}
+/* Texto de las tarjetas */
+.tarjeta-info p {
+  color: #010000;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+/* Efecto :hover (Interactividad) */
+.tarjeta-info:hover {
+  transform: translateY(-8px); 
+  box-shadow: 0 12px 20px rgba(224, 139, 155, 0.2); 
+}
+.texto-imagenes button {
+  margin: 15px auto 20px auto;
+  padding: 12px 20px; 
+  background-color: #e5a93b; 
+  color: #ffffff; 
+  text-transform: uppercase; 
+  border: none; 
+  border-radius: 25px; 
+  box-shadow: 0 4px 10px rgba(229, 169, 59, 0.3); 
+}
+.tarjeta-info button{
+  margin: 15px auto 20px auto;
+  padding: 12px 20px; 
+  background-color: #e5a93b; 
+  color: #ffffff; 
+  text-transform: uppercase; 
+  border: none; 
+  border-radius: 25px; 
+  box-shadow: 0 4px 10px rgba(229, 169, 59, 0.3); 
+ 
+}
+/* inicio de css formulario */
+/* Contenedor principal del formulario */
+.formulario {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px 25px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* Título del formulario */
+.formulario h2 {
+  color: #010000;
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+  text-align: center;
+}
+/* Contenedor de cada grupo de campo (Label + Input) */
+.grupo-campo {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column; 
+}
+/* Etiquetas (Labels) */
+.grupo-campo label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: #333333;
+}
+/* Estilos comunes para Inputs, Selects */
+.grupo-campo input[type="text"],
+.grupo-campo input[type="email"],
+.grupo-campo input[type="tel"],
+.grupo-campo select,
+.grupo-campo textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #cccccc;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+  color: #262626;
+}
+/* Botón de enviar */
+.btn-enviar {
+  width: 100%;
+  background-color: #1a365d; 
+  color: #ffffff;
+  padding: 14px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  box-shadow: 0 3px 6px rgba(255, 122, 69, 0.2);
+}
+.btn-enviar:hover {
+  background-color: #FFE600;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 12px rgba(255, 122, 69, 0.3);
+}
+/* Media Query para pantallas medianas/grandes) */
+@media screen and (min-width: 480px) {
+    .formulario {
+        padding: 40px;
+    }
+}
+/* secion adopta */
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr;
+  gap: 25px; 
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* 2. Estilos de las tarjetas de adopcion */
+.grid-card {
+  background-color: #ffffff; 
+  border: 1px solid #e2e8f0;  
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03); 
+  border-radius: 16px;     
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+/* Efecto visual */
+.grid-card:hover {
+  transform: translateY(-4px);
+ box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+/* 3.  Imágenes dentro de las Tarjetas */
+.grid-card img {
+  border-radius: 16px;
+  width: 100%;
+  height: 240px; 
+  object-fit: cover;
+  display: block;
+  background-color: #e2e8f0; 
+}
+/* 4. para modificae el color en este caso el titulo donde va el nombbre de la mascota */
+.grid-card h3 {
+  margin: 15px 20px 5px 20px;
+  color: #1a365d; 
+  font-size: 1.4rem;
+}
+/* 5. para modificar el parrafo dentro de la trajeta */
+.grid-card p {
+  margin: 0 20px 15px 20px;
+  color: #555555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+/*  estilos para el boton dentro de las tarjetas */
+.grid-card button {
+  display: block;
+  width: 85%; 
+  margin: 15px auto 20px auto;
+  padding: 12px 20px; 
+  background-color: #e5a93b; 
+  color: #ffffff; 
+  font-size: 0.95rem;
+  font-weight: bold;
+  text-transform: uppercase; 
+  letter-spacing: 1px;
+  border: none; 
+  border-radius: 25px; 
+  box-shadow: 0 4px 10px rgba(229, 169, 59, 0.3); 
+  transition: all 0.3s ease; 
+}
+.grid-card button a, 
+.grid-card a {
+  text-decoration: none;
+}
+/* EFECTO AL PASAR EL MOUSE*/
+.grid-card button:hover {
+  transform: translateY(-3px); 
+  box-shadow: 0 6px 15px rgba(229, 169, 59, 0.45); 
+}
+/* Pantallas Medianas (Tabletas - Desde 600px de ancho) */
+@media screen and (min-width: 600px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+/* Pantallas Grandes (Computadores - Desde 1024px de ancho) */
+@media screen and (min-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 30px; 
+    }
+}
+/*apartdo conocenos */
+/* Contenedor principal: actúa como una ventana invisible */
+.fotos-conocenos {
+  width: 100%;
+  max-width: 800px; 
+  margin: 0 auto;
+  overflow: hidden; 
+  border-radius: 12px; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); 
+}
+/* El contenedor interno que se moverá de derecha a izquierda */
+.animacion-conocenos {
+  display: flex;
+  width: 400%;
+  animation: carrusel-infinito 12s infinite ease-in-out;
+}
+/* Ajuste individual para cada imagen */
+.animacion-conocenos img {
+  width: 25%; 
+  height: 450px; 
+  object-fit: cover; 
+}
+/* Animación exacta para alternar entre las dos imágenes con pausas */
+@keyframes carrusel-infinito {
+    0%, 40% {
+        transform: translateX(0);
+    }
+    50%, 90% {
+        transform: translateX(-25%); 
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+/* ESTILOS PARA LA SECCIÓN CONÓCENOS  */
+.seccion-conocenos {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+/* Título principal de la sección */
+.titulo-seccion {
+  text-align: center;
+  font-size: 2.5rem;
+  color:  #1a202c;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+/* Contenedor que alinea las dos tarjetas */
+.contenedor-tarjetas {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+.tarjeta-info{
+  background-color: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column; 
+  width: 100%;
+  max-width: 900px;
+}
+/* Contenedor de la foto dentro de la tarjeta */
+.contenedor-img-tarjeta {
+  width: 100%;
+  height: 300px; 
+  overflow: hidden;
+}
+.contenedor-img-tarjeta img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+/* Contenedor del texto (Títulos y párrafos) */
+.contenido-tarjeta {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.contenido-tarjeta h3 {
+  font-size: 1.8rem;
+  color: #1a365d;
+  font-weight: 700;
+  margin-bottom: 15px;
+  position: relative;
+}
+.contenido-tarjeta p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666666;
+}
+/* Responsive: Ajustes para pantallas más pequeñas (Celulares) */
+@media (max-width: 768px) {
+    .tarjeta-info {
+        width: 100%; 
+    }
+    
+    .titulo-seccion {
+        font-size: 2rem;
+    }
+}
+/* Estilos del Footer  */
+.sitio-footer {
+  background-color: #1e2229;
+  color: #f8f9fa;
+  padding: 30px 20px;  
+  width: 100%;  
+  box-sizing: border-box;
+}
+.contenedor-footer {
+  display: flex;
+  max-width: 1100px;
+  margin: 0 auto;  
+  flex-direction: row;
+  justify-content: space-between; 
+  align-items: center;            
+  flex-wrap: wrap;                
+  gap: 20px;                      
+}
+/* Estilos de los bloques internos */
+.bloque-footer {
+  flex: 1 1 250px; 
+  min-width: 200px;
+}
+.bloque-footer h4, 
+.bloque-footer h5 {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+.nombre-fundacion {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.copyright {
+  font-size: 0.9rem;
+  color: #a0aec0;
+}
+
+.sitio-footer a {
+  color: #4a90e2;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+.sitio-footer a:hover {
+  color: #63b3ed;
+  text-decoration: underline;
+}
+.contacto-footer h5,
+.creditos-desarrollador h5 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #a0aec0;
+}
+.creditos-desarrollador p {
+  font-size: 0.95rem;
+  color: #e2e8f0;
+}
+@media (max-width: 768px) {
+    .contenedor-footer {
+        flex-direction: column;    
+        text-align: center;         
+        gap: 25px;
+    }
+    
+    .bloque-footer {
+        flex: 1 1 100%;
+    }
+}
+/*graficos*/
+.impacto-cifras {
+background-color: #ebebeb; 
+padding: 60px 20px;
+text-align: center;
+font-family: 'Poppins', sans-serif; 
+}
+
+.impacto-cifras .contenedor {
+max-width: 1200px;
+margin: 0 auto;
+}
+
+.titulo-seccion {
+font-size: 2.5rem;
+color: #1b2127;
+margin-bottom: 10px;
+}
+
+.subtitulo-seccion {
+font-size: 1.1rem;
+color: #000000;
+margin-bottom: 40px;
+}
+
+.grid-cifras {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap: 30px;
+}
+
+.tarjeta-cifra {
+background-color: #ffffff;
+padding: 30px 20px;
+border-radius: 15px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+
+.tarjeta-cifra:hover {
+transform: translateY(-5px);
+box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta-cifra .numero {
+font-size: 3rem;
+color: #e67e22; 
+font-weight: bold;
+margin: 10px 20px;
+
+}
+
+.tarjeta-cifra .descripcion {
+font-size: 1rem;
+color: #34495e;
+margin: 0;
+font-weight: 500;
+}
+.seccion-grafico {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+max-width: 100vw;
+margin: 30px auto;
+padding: 20px;
+background-color: #f9f9f9;
+border-radius: 8px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+h2 {
+color: #131313d3;
+text-align: center;
+margin-bottom: 25px; 
+}
+.contenedor-barras {
+display: flex;
+flex-direction: column;
+gap: 15px;
+}
+.barra, .barra2, .barra3, .barra4 {
+width: 100%;
+background-color: #e0e0e0;
+border-radius: 25px;
+overflow: hidden; 
+}
+
+      
+.barra div, .barra2 div, .barra3 div, .barra4 div {
+padding: 15px 20px;
+color: white;
+font-weight: bold;
+font-size: 14px;
+}
+
+#animal-adopted {
+width: 80%;
+background: linear-gradient(90deg, #4caf50, #66bb6a);
+}
+
+#animal-rescatados {
+width: 74%;
+background: linear-gradient(90deg, #2196f3, #42a5f5);
+} 
+
+       
+#voluntarios {
+width: 42%; 
+background: linear-gradient(90deg, #ff9800, #ffb74d);
+} 
+#esterilizados-vacunados {
+width: 100%;
+background: linear-gradient(90deg, #9c27b0, #ba68c8);
+}
+/* Sección del texto de Gracias */
+.final {
+padding: 60px 20px;
+margin-top: 20px;
+margin-bottom: 0;
+text-align: center;
+background-color: #ebebeb;
+}
+
+.final h2 {
+margin-bottom: 20px;
+font-size: 2rem;
+color: #1e252b;
+}
+
+.final p {
+max-width: 800px;
+margin: 0 auto 25px auto;
+line-height: 1.6;
+color: #4a5568;
+}
+
+.btn-final {
+background-color: #ff9f1c;
+color: white;
+font-size: 1rem;
+font-weight: bold;
+padding: 12px 25px;
+border: none;
+border-radius: 25px;
+transition: background-color 0.3s ease, transform 0.2s ease;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-final:hover {
+background-color: #e08a10;
+transform: translateY(-2px);
+}
+
+.sitio-footer {
+background-color: #1e252b; 
+color: white;
+padding: 40px 20px;
+margin-top: 0;            
+}
+
+@media (max-width: 768px) {
+    .contenedor-barras {
+        flex-direction: column; 
+        gap: 20px;
+    }
+}
+
